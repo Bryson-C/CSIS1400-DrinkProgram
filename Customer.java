@@ -12,8 +12,9 @@ public class Customer {
     //      Because It's Stored As A LocalTime, You Should Call `getTimeOfOrder`
     //      To Get A Printable String In a Non-Military Time Format
     private LocalTime orderTime;
-    // TODO: Implement `Drink` Class
+
     private Drink customerDrink;
+
     // The Constructor
     Customer(String customerName) {
         orderTime = LocalTime.now(ZoneId.systemDefault());
@@ -52,8 +53,8 @@ public class Customer {
      */
     public void printOrder() {
         System.out.printf("Order Placed At %s\n", getTimeOfOrder());
-        System.out.printf("Thank You %s For Coming In!", getName());
-        // This Has Not Been Added Yet
+        System.out.print("Thank You For Coming In! Here Is Your ");
         customerDrink.printDrink();
+        System.out.printf(" For %s\n", getName());
     }
 }
